@@ -1,0 +1,32 @@
+include social.data.pug
+
+mixin social(mods)
+
+  //- Принимает:
+  //-   mods: ''          {string} - модификаторы блока
+  //- Вызов:
+        +social()
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' social--' + modsList[i].trim();
+      }
+    }
+
+  ul.social(class=allMods)&attributes(attributes)
+    each item in socials
+      li.social__item
+        a.social__link(href=item.url)
+          svg(class='social__icon', width='24', height='24')
+            title= item.name
+            use(xlink:href=`images/svg/sprite.svg#${item.name}`)
+
+
+
+
+
+

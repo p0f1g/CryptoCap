@@ -1,0 +1,31 @@
+mixin btn(text, mods, isInput)
+
+  //- Takes:
+  //-   text    {string} - text of button
+  //-   mods    {string} - list of modifiers
+  //-   isInput {bool}   - flag «this is a tag input»
+  //- Call:
+        +btn('Button-link')(href='/')  - if href - button-link
+        +btn('Button-input', '', true)   - if flag true - intup
+        +btn('Button-button', 'success') - нет href, нет isInput — это button
+
+  -
+    // list of modifiers
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' btn--' + modsList[i].trim();
+      }
+    }
+
+  if (attributes.href)
+    a.btn(class=allMods)&attributes(attributes)!= text
+      block
+
+  else if (typeof(isInput) !== 'undefined' && isInput)
+    input.btn(class=allMods, value=text, type='button')&attributes(attributes)
+
+  else
+    button.btn(class=allMods)&attributes(attributes)!= text
+      block

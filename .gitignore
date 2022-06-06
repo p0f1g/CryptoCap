@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+
+# Ignore folders from source code editors
+.vscode
+.idea
+
+.cache
+.eslintcache

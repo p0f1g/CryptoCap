@@ -1,0 +1,58 @@
+.btn {
+  display: inline-block;
+  margin: 0;
+  border-radius: $border-radius;
+  // border: 1px solid $gray-lighter;
+  border: 0;
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: none;
+  text-align: center;
+  font-size: 0.875rem;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: none;
+  color: $text-color;
+  background-color: transparent;
+  background-image: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $text-color;
+    background-color: darken($gray-lightest, 10%);
+  }
+
+  // &:visited {
+  //   color: $color-text;
+  // }
+
+  &:active,
+  &:focus {
+    @include field-focus;
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: 0.9;
+    cursor: not-allowed;
+    color: $text-color;
+    //background-color: $gray-lightest;
+    //border-color: $gray-lighter;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+  // &__icon {
+  //   display: inline-block;
+  //   vertical-align: middle;
+  // }
+}

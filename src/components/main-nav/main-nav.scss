@@ -1,0 +1,140 @@
+.main-nav {
+  position: relative;
+  z-index: 10;
+}
+
+// первый уровень
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  // мобильный вид списка
+  @include media-down(md) {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s;
+
+    &--lvl-2 {
+      max-height: none;
+    }
+
+    .main-nav--open & {
+      max-height: 1000px;
+      transition: max-height 0.6s;
+
+      &--lvl-2 {
+        max-height: none;
+      }
+    }
+  }
+
+  // настольный вид списка
+  @include media-up(md) {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--lvl-2 {
+      display: block;
+    }
+
+    &--lvl-3 {
+      display: block;
+    }
+  }
+}
+
+.main-nav__item {
+  position: relative;
+
+  &--active {
+    & > .main-nav__link {
+      color: #000;
+    }
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  display: block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background-color: #fff;
+
+  &:hover,
+  &:focus {
+    z-index: 1;
+    text-decoration: none;
+    background-color: #ccc;
+  }
+
+  &--lvl-2 {
+    min-width: 200px;
+
+    @include media-down(md) {
+      padding-left: 2em;
+    }
+  }
+
+  &--lvl-3 {
+    min-width: 200px;
+
+    @include media-down(md) {
+      padding-left: 3em;
+    }
+  }
+}
+
+.main-nav__sublist-wrapper {
+  &--lvl-2 {
+    @include media-up(md) {
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: opacity 0.3s;
+
+      .main-nav__item--show-child > &,
+      .main-nav__item:hover & {
+        height: auto;
+        overflow: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &--lvl-3 {
+    @include media-up(md) {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 100%;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s;
+
+      .main-nav__item--show-child > &,
+      .main-nav__item--lvl-2:hover & {
+        height: auto;
+        overflow: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// переключатель
+.main-nav__toggler {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  background: none;
+
+  @include media-up(md) {
+    display: none;
+  }
+}

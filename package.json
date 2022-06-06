@@ -1,0 +1,80 @@
+{
+  "name": "pfg-starter",
+  "version": "0.1.0",
+  "description": "Start template for creating websites",
+  "author": "PFG",
+  "type": "module",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 version",
+    "> 1%"
+  ],
+  "scripts": {
+    "dev": "gulp",
+    "build": "cross-env MODE=production gulp build",
+    "lint": "eslint --debug src/",
+    "lint:write": "eslint --debug src/ --fix",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "browser-sync": "^2.27.10",
+    "cross-env": "^7.0.3",
+    "del": "^6.1.1",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.3",
+    "postcss": "^8.4.14",
+    "postcss-csso": "^6.0.0",
+    "postcss-sort-media-queries": "^4.2.1",
+    "prettier": "2.6.2",
+    "sass": "^1.52.1",
+    "webpack-stream": "^7.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "no-plusplus": [
+        "error",
+        {
+          "allowForLoopAfterthoughts": true
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,json,scss,md}": "prettier --write"
+  }
+}

@@ -1,0 +1,13 @@
+@import 'base/variables';
+@import 'utils/mixins';
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/global';
+
+@import '../components/btn/btn';
+@import '../components/burger/burger';
+@import '../components/logo/logo';
+@import '../components/main-nav/main-nav';
+@import '../components/social/social';
+@import '../components/page-footer/page-footer';
+@import '../components/page-header/page-header';

@@ -1,0 +1,40 @@
+include mixins.pug
+
+doctype html
+html(class='page', lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    //- link(rel='preload', href='fonts/Bloggersans.woff2', as='font', type='font/woff2', crossorigin='anonymous')
+
+    //- Favicon
+    link(rel='manifest', href='manifest.webmanifest')
+    link(rel='icon', href='images/favicon/favicon.ico', sizes='any')
+    link(rel='icon', href='images/favicon/favicon.svg', type='image/svg+xml')
+    link(rel='apple-touch-icon', href='images/favicon/apple-touch-icon.png')
+    meta(name='theme-color', content='#112240')
+
+    block meta
+      title Home
+
+    block head
+      link(rel='stylesheet', href='css/main.css')
+
+  body
+    .page__inner
+      .page__content
+        +page-header()
+          +logo('/')
+            img(src='img/demo-logo.svg', alt='Logo', width='64', height='18')
+          block nav
+
+        block content
+          p main content
+
+      +page-footer()
+        block footer
+          p page footer
+
+    block page-bottom
+      script(src='js/main.js')

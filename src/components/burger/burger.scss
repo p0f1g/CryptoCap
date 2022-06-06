@@ -1,0 +1,69 @@
+.burger {
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  user-select: none;
+  cursor: pointer;
+
+  // @include media-up(md) {
+  //   display: none;
+  // }
+
+  > span {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2px;
+    font-size: 0;
+    color: transparent;
+    background-color: $gray-dark;
+    transition: background-color 0.3s;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $gray-dark;
+      transform-origin: 50% 50%;
+      transition: transform 0.3s, top 0.3s;
+    }
+
+    &:before {
+      top: -10px;
+    }
+
+    &:after {
+      top: 10px;
+    }
+  }
+
+  &--close {
+    > span {
+      background-color: transparent;
+
+      &:before,
+      &:after {
+        width: 100%;
+        top: 0;
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}

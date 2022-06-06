@@ -1,0 +1,17 @@
+mixin burger(label, targetId, switchableClass)
+
+  //- Takes:
+  //-   label           {string} - attribute value of aria-label
+  //-   targetId        {string} - attribute id of target element (without #) for toggling class by click
+  //-   switchableClass {string} - class for adding/removing from target element
+  //- Call:
+        +burger('Show example code', 'burger-code', 'blocks-library__code--shown')
+        +burger('Show ничто')(data-some="SOME")
+
+  -
+    label = label || 'Toggle block ' + targetId
+    if (typeof(targetId) !== 'undefined' && targetId !== '') attributes['data-target-id'] = targetId
+    if (typeof(switchableClass) !== 'undefined' && switchableClass !== '') attributes['data-target-class-toggle'] = switchableClass
+
+  button.burger(aria-label=label)&attributes(attributes)
+    span= label
