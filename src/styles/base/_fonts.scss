@@ -1,1 +1,21 @@
-//@include font-face($family-name: Roboto, $file-name: Roboto-Regular);
+@include font-face($family-name: Roboto, $file-name: Roboto-Regular);
+@include font-face(
+  $family-name: Roboto,
+  $file-name: Roboto-Medium,
+  $font-weight: 500
+);
+@include font-face(
+  $family-name: Raleway,
+  $file-name: Raleway-Medium,
+  $font-weight: 500
+);
+@include font-face(
+  $family-name: Raleway,
+  $file-name: Raleway-SemiBold,
+  $font-weight: 600
+);
+@include font-face(
+  $family-name: Raleway,
+  $file-name: Raleway-Bold,
+  $font-weight: 700
+);

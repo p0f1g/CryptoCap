@@ -1,10 +1,10 @@
 export default function mobileMenu() {
   const burger = document.querySelector('.burger');
-  const menu = document.querySelector('.main-nav');
+  const menu = document.querySelector('.page-header__nav');
 
   const toggleMenu = () => {
     burger.classList.toggle('burger--close');
-    menu.classList.toggle('main-nav--open');
+    menu.classList.toggle('page-header__nav--open');
     document.body.classList.toggle('lock');
   };
 
@@ -15,7 +15,7 @@ export default function mobileMenu() {
 
   menu.addEventListener('click', (e) => {
     if (
-      menu.classList.contains('main-nav--open') &&
+      menu.classList.contains('page-header__nav--open') &&
       e.target.classList.contains('menu__link')
     ) {
       toggleMenu();

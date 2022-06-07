@@ -1,5 +1,5 @@
-// import mobileMenu from './modules/mobileMenu.js';
+import Burger from '../components/burger/burger.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // mobileMenu();
+  Burger();
 });

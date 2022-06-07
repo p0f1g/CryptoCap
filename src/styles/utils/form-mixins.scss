@@ -1,4 +1,11 @@
 @mixin field-focus {
   outline: 0;
-  box-shadow: 0 0 0 2px rgba($color-main, 0.7);
+  box-shadow: 0 0 0 2px rgba($color-accent, 0.7);
+}
+
+@mixin field-name {
+  display: block;
+  margin-bottom: 0.4em;
+  line-height: $line-height;
+  font-weight: 700;
 }

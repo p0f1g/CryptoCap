@@ -12,20 +12,22 @@ $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
-$color-main:                  hsl(208, 98%, 43%);
-$color-success:               hsl(120, 39%, 54%);
-$color-danger:                hsl(2, 64%, 58%);
-$color-warning:               hsl(35, 84%, 62%);
+$color-accent:                #0fae96;
+$color-light:                 #ecf1f0;
+$color-dark:                  #11011e;
+$color-gray:                  #b6b6b6;
+
 
 
 // Semantic colors
 
-$text-color:                    $gray-darkest;
+$text-color:                    $color-gray;
 $text-color-muted:              $gray;
-$body-bg:                       $white;
+$body-bg:                       $color-dark;
+$btn-color:                     $color-accent;
 
-$link-color:                    $color-main;
-$link-color--hover:             darken($color-main, 15%);
+$link-color:                    $color-light;
+$link-color--hover:             $color-accent;
 
 $border-color:                  $gray-lighten;
 
@@ -42,13 +44,14 @@ $font-size-h5:                  16px;
 $font-size-h6:                  16px;
 
 $font-family:                   'Roboto', sans-serif;
-$font-family--monospace:        'RobotoMono', monospace;
-$line-height:                   1.3;
+$font-family-secondary:         'Raleway', sans-serif;
+$line-height:                   1.5;
 
 
 // Other
 
-$border-radius:                 4px;
+$border-radius:                 10px;
+$container:                     1260px;
 
 $grid-breakpoints: (
   xs: 0,

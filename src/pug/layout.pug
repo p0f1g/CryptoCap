@@ -13,7 +13,7 @@ html(class='page', lang='en')
     link(rel='icon', href='images/favicon/favicon.ico', sizes='any')
     link(rel='icon', href='images/favicon/favicon.svg', type='image/svg+xml')
     link(rel='apple-touch-icon', href='images/favicon/apple-touch-icon.png')
-    meta(name='theme-color', content='#112240')
+    meta(name='theme-color', content='#11011e')
 
     block meta
       title Home
@@ -25,8 +25,9 @@ html(class='page', lang='en')
     .page__inner
       .page__content
         +page-header()
-          +logo('/')
-            img(src='img/demo-logo.svg', alt='Logo', width='64', height='18')
+          .page-header__logo
+            +logo('/')
+              img(src='images/logo.svg', alt='CryptoCap logo', width='124', height='28')
           block nav
 
         block content

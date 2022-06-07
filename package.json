@@ -66,6 +66,13 @@
         {
           "allowForLoopAfterthoughts": true
         }
+      ],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "ignorePackages"
+        }
       ]
     }
   },

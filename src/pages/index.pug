@@ -8,11 +8,37 @@ block meta
 //-   link(rel='stylesheet', href='css/some.css')
 
 block nav
-  +main-nav('10')
+  +burger('Show main menu', 'mobile-nav', 'page-header__nav--open')
+  .page-header__nav#mobile-nav
+    +main-nav('1')
+    .page-header__cta
+      +field-select(
+          '',
+          {
+            name: 'lang',
+            id: 'lang'
+          },
+          [
+            {
+              title: 'EN',
+              attrs: {
+                value: 'en',
+              }
+            },
+            {
+              title: 'UA',
+              attrs: {
+                value: 'ua',
+              }
+            },
+          ]
+        )
+      +btn('Login')
+
 
 block content
   h1 Heading
-  +social()
+
 
 
 //- block footer
