@@ -38,6 +38,10 @@
     @include field-focus;
   }
 
+  &--large {
+    padding: 1.25em 3.2em;
+  }
+
   &--disabled,
   &:disabled {
     opacity: 0.9;
