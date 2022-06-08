@@ -1,0 +1,20 @@
+include coins.data.pug
+
+mixin market-trend(mods)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' market-trend--' + modsList[i].trim();
+      }
+    }
+
+  section.market-trend(class=allMods)&attributes(attributes)
+    .market-trend__inner
+      h2.heading Market Trend
+      .trend-coins
+        each coin in coins
+          .trend-coins__inner
+            +coin-card(coin)
+

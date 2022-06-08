@@ -1,14 +1,6 @@
-mixin hero(mods)
-  -
-    var allMods = '';
-    if(typeof(mods) !== 'undefined' && mods) {
-      var modsList = mods.split(',');
-      for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' hero--' + modsList[i].trim();
-      }
-    }
+mixin hero()
 
-  section.hero(class=allMods)&attributes(attributes)
+  section.hero
     .hero__inner
       h1.title Start and Build Your Crypto Portfolio Here
       h2.subtitle Only at CryptoCap, you can build a good portfolio and learn best practices about cryptocurrency.

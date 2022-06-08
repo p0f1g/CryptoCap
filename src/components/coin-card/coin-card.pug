@@ -1,0 +1,25 @@
+mixin coin-card(coin, mods)
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' coin-card--' + modsList[i].trim();
+      }
+    }
+
+  .coin-card(class=allMods)&attributes(attributes)
+    .coin-card__info
+      .coin-card__icon
+        img(src=`images/coin-icons/${coin.icon}`, alt=coin.name)
+      .coin-card__abbr= coin.abbr
+      .coin-card__name= coin.name
+      a.coin-card__link(href=coin.url)
+        svg(width='17', height='17')
+          use(xlink:href='images/svg/sprite.svg#arrow-top-right')
+    .coin-card__bottom
+      .coin-card__value
+        .coin-card__price= `$${coin.price}`
+        .coin-card__grow= coin.percent
+      .coin-card__chart
+        img(src='images/chart.png', alt='')

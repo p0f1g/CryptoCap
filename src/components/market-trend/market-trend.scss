@@ -1,0 +1,21 @@
+.market-trend {
+  margin-bottom: 150px;
+  .heading {
+    margin-bottom: 24px;
+  }
+}
+
+.trend-coins {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+
+  .trend-coins__inner {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 24px;
+    flex-basis: 25%;
+    min-width: 305px;
+  }
+}
