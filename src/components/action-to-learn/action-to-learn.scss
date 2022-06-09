@@ -1,0 +1,38 @@
+.action-to-learn {
+  margin-bottom: 50px;
+
+  @include media-up(md) {
+    margin-bottom: 90px;
+  }
+
+  @include media-up(lg) {
+    margin-bottom: 160px;
+  }
+}
+
+.action-to-learn__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+
+  @include media-up(md) {
+    padding: 20px 60px;
+  }
+}
+
+.action-to-learn__heading {
+  margin-bottom: 12px;
+}
+
+.action-to-learn__btn {
+  padding: 1em 1.5em;
+}
+
+.action-to-learn__desc {
+  max-width: 536px;
+}
