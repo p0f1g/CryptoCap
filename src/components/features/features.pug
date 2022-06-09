@@ -1,0 +1,12 @@
+include features.data.pug
+
+mixin features()
+
+  section.features
+    .features__inner
+      .features__header
+        h2.title CryptoCap Amazing Features
+        h3.subtitle Explore sensational features to prepare your best investment in cryptocurrency
+      .features-items
+        each item in featuresItems
+          +features-item(item)

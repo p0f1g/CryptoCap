@@ -1,0 +1,42 @@
+.features {
+  margin-bottom: 60px;
+
+  @include media-up(md) {
+    margin-bottom: 90px;
+  }
+
+  @include media-up(lg) {
+    margin-bottom: 130px;
+  }
+}
+
+.features__header {
+  margin-bottom: 35px;
+  text-align: center;
+
+  @include media-up(md) {
+    margin-bottom: 50px;
+  }
+
+  @include media-up(lg) {
+    margin-bottom: 75px;
+  }
+}
+
+.features-items {
+  display: grid;
+  justify-content: center;
+  gap: 24px;
+
+  @media (min-width: 500px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-up(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-up(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

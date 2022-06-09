@@ -1,0 +1,9 @@
+mixin features-item(feature)
+
+  .features-item
+    .features-item__icon
+      img(src=`images/features/${feature.icon}`, alt='')
+    h4.features-item__title= feature.title
+    .features-item__desciption
+      p= feature.text
+    a.features-item__link(href=feature.url) See Explained

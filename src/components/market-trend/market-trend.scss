@@ -1,5 +1,14 @@
 .market-trend {
-  margin-bottom: 150px;
+  margin-bottom: 60px;
+
+  @include media-up(md) {
+    margin-bottom: 90px;
+  }
+
+  @include media-up(lg) {
+    margin-bottom: 130px;
+  }
+
   .heading {
     margin-bottom: 24px;
   }
