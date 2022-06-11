@@ -1,0 +1,13 @@
+mixin btn-filter(text, mods)
+  -
+    // list of modifiers
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' btn-filter--' + modsList[i].trim();
+      }
+    }
+
+  button.btn-filter(class=allMods)&attributes(attributes)!= text
+    block

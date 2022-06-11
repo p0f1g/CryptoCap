@@ -1,0 +1,132 @@
+mixin market-update()
+
+  section.market-update
+    .market-update__inner
+      .market-update__header
+        h2.title Market Update
+        h3.subtitle Cryptocurrency Categories
+      .market-update__filter
+        .filters-button-group
+          +btn-filter('Popular', 'active')(data-filter='popular')
+          +btn-filter('Metaverse')(data-filter='metaverse')
+          +btn-filter('Entertainment')(data-filter='entertainment')
+          +btn-filter('Energy')(data-filter='energy')
+          +btn-filter('Gaming')(data-filter='gaming')
+          +btn-filter('Music')(data-filter='music')
+          +btn-filter('See All 12+')(data-filter='all')
+        form.filter-form
+          +field-text({
+            mods: 'with-btn',
+            attrs: {
+              name: 'search',
+              placeholder: 'Search Coin'
+            }
+          })
+            button.filter-form__btn(type='submit')
+              svg(width='24', height='24')
+                use(xlink:href=`images/svg/sprite.svg#search`)
+      +table()
+          thead
+            tr
+              th.row-number NO
+              th NAME
+              th LAST PRICE
+              th CHANGE
+              th.stats MARKET STATS
+              th TRADE
+          tbody
+            tr
+              td.row-number 1
+              td
+                .coin-item
+                  img(src='images/coin-icons/btc.png', alt='Bitcoin')
+                  span.coin-name Bitcoin
+                  span.coin-abbr BTC
+              td $56,623.54
+              td 1.41%
+              td.stats
+                img(src='images/chart.png', alt='chart')
+              td
+                +btn('Trade','trade')
+            tr
+              td.row-number 2
+              td
+                .coin-item
+                  img(src='images/coin-icons/eth.png', alt='Ethereum')
+                  span.coin-name Ethereum
+                  span.coin-abbr ETH
+              td $4,267.90
+              td 2.22%
+              td.stats
+                img(src='images/chart.png', alt='chart')
+              td
+                +btn('Trade','trade')
+            tr
+              td.row-number 3
+              td
+                .coin-item
+                  img(src='images/coin-icons/bnb.png', alt='Binance')
+                  span.coin-name Binance
+                  span.coin-abbr BNB
+              td $587.74
+              td.red -0.82%
+              td.stats
+                img(src='images/chart.png', alt='chart')
+              td
+                +btn('Trade','trade')
+            tr
+              td.row-number 4
+              td
+                .coin-item
+                  img(src='images/coin-icons/usdt.png', alt='Tether')
+                  span.coin-name Tether
+                  span.coin-abbr USDT
+              td $0.9998
+              td.red -0.03%
+              td.stats
+                img(src='images/chart.png', alt='chart')
+              td
+                +btn('Trade','trade')
+            tr
+              td.row-number 5
+              td
+                .coin-item
+                  img(src='images/coin-icons/sol.png', alt='Solana')
+                  span.coin-name Solana
+                  span.coin-abbr SOL
+              td $213.67
+              td.red -0.53%
+              td.stats
+                img(src='images/chart.png', alt='chart')
+              td
+                +btn('Trade','trade')
+            tr
+              td.row-number 6
+              td
+                .coin-item
+                  img(src='images/coin-icons/xrp.png', alt='XRP')
+                  span.coin-name XRP
+                  span.coin-abbr XRP
+              td $1.04
+              td.red -0.44%
+              td.stats
+                img(src='images/chart.png', alt='chart')
+              td
+                +btn('Trade','trade')
+            tr
+              td.row-number 7
+              td
+                .coin-item
+                  img(src='images/coin-icons/usdc.png', alt='USD Coin')
+                  span.coin-name USD Coin
+                  span.coin-abbr USDC
+              td $1.00
+              td.red -0.03%
+              td.stats
+                img(src='images/chart.png', alt='chart')
+              td
+                +btn('Trade','trade')
+
+      a.see-all-coins(href='#') See All Coins
+
+

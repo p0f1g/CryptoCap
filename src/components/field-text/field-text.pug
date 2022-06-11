@@ -1,0 +1,38 @@
+mixin field-text(props)
+
+  //- Принимает:
+  //-   props {
+  //-     isTextarea: false {bool}   - флаг input/textarea
+  //-     mods: ''          {string} - модификаторы блока
+  //-     val: ''           {string} - текст в поле
+  //-     attrs:            {object} - любые атрибуты для input/textarea
+  //-       type:           {string}
+  //-       placeholder:    {string}
+  //- Вызов:
+        +field-text({
+          isTextarea: true,
+          mods: '',
+          val: '',
+          attrs: {
+            name: 'comment',
+          }
+        })
+
+  -
+    if(typeof(props) === 'undefined') {
+      var props = {};
+    }
+    var allMods = '';
+    if(typeof(props.mods) !== 'undefined' && props.mods) {
+      var modsList = props.mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' field-text--' + modsList[i].trim();
+      }
+    }
+
+  .field-text(class=allMods)&attributes(attributes)
+    if(typeof(props.isTextarea) !== 'undefined' && props.isTextarea)
+      textarea.field-text__input&attributes(props.attrs)= props.val
+    else
+      input.field-text__input(type=(typeof(props.attrs) !== 'undefined' && props.attrs.type) ? props.attrs.type : 'text', value=props.val)&attributes(props.attrs)
+    block

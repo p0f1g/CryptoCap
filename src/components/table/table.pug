@@ -1,0 +1,13 @@
+mixin table(mods)
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' table--' + modsList[i].trim();
+      }
+    }
+
+  table.table(class=allMods)&attributes(attributes)
+    block

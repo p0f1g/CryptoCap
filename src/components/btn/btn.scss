@@ -42,6 +42,15 @@
     padding: 1.25em 3.2em;
   }
 
+  &--trade {
+    padding: 0.5em 1.5em;
+
+    @include media-down(sm) {
+      font-size: 14px;
+      padding: 0.7em 1.2em;
+    }
+  }
+
   &--disabled,
   &:disabled {
     opacity: 0.9;

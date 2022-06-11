@@ -1,0 +1,53 @@
+.btn-filter {
+  display: inline-block;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  background-image: none;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 13px 12px;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: none;
+  text-align: center;
+  font-size: 1rem;
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: $color-gray;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+
+  &:hover {
+    color: #211631;
+    background-color: #eaeaea;
+  }
+
+  &:active,
+  &:focus {
+    @include field-focus;
+  }
+
+  &--active {
+    font-weight: 500;
+    color: #211631;
+    background-color: #eaeaea;
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: 0.9;
+    cursor: not-allowed;
+    color: $text-color;
+    //background-color: $gray-lightest;
+    //border-color: $gray-lighter;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+}
