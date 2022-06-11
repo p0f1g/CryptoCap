@@ -1,5 +1,13 @@
 .market-update {
-  margin-bottom: 130px;
+  margin-bottom: 60px;
+
+  @include media-up(md) {
+    margin-bottom: 100px;
+  }
+
+  @include media-up(xxl) {
+    margin-bottom: 130px;
+  }
 }
 
 .market-update__header {
