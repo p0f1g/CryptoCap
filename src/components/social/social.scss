@@ -8,7 +8,7 @@
 
 .social__item {
   &:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 7px;
   }
 }
 
@@ -26,5 +26,5 @@
 }
 
 .social__link:hover .social__icon {
-  fill: $color-accent;
+  fill: $color-light;
 }

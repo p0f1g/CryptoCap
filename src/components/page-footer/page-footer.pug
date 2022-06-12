@@ -17,4 +17,45 @@ mixin page-footer(mods)
 
   footer.page-footer(class=allMods)&attributes(attributes)
     .page-footer__inner
-      block
+      .page-footer__menu
+        .footer-menu
+          h4.menu-title About Us
+          ul.menu-list
+            li.menu-list__item
+              a.menu-list__link(href='#') About
+            li.menu-list__item
+              a.menu-list__link(href='#') Careers
+            li.menu-list__item
+              a.menu-list__link(href='#') Blog
+            li.menu-list__item
+              a.menu-list__link(href='#') Legal &amp; privacy
+
+        .footer-menu
+          h4.menu-title Services
+          ul.menu-list
+            li.menu-list__item
+              a.menu-list__link(href='#') Aplications
+            li.menu-list__item
+              a.menu-list__link(href='#') Buy Crypto
+            li.menu-list__item
+              a.menu-list__link(href='#') Affilliate
+            li.menu-list__item
+              a.menu-list__link(href='#') Institutional Services
+
+        .footer-menu
+          h4.menu-title Learn
+          ul.menu-list
+            li.menu-list__item
+              a.menu-list__link(href='#') What is Cryptocurency?
+            li.menu-list__item
+              a.menu-list__link(href='#') Crypto Basic
+            li.menu-list__item
+              a.menu-list__link(href='#') Tips and Tutorials
+            li.menu-list__item
+              a.menu-list__link(href='#') Market Update
+      .page-footer__left
+        +logo('/').page-footer__logo
+          img(src='images/logo.svg', alt='CryptoCap logo', width='124', height='28')
+        +social().page-footer__social
+        .copyright 2021 CoinMarketCap. All rights reserved
+
