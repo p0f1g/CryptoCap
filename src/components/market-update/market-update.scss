@@ -98,15 +98,3 @@
     margin-right: 12px;
   }
 }
-
-.see-all-coins {
-  color: $color-accent;
-  font-family: $font-family-secondary;
-  font-weight: 600;
-  text-decoration: underline;
-  transition: color 0.25s ease;
-
-  &:hover {
-    color: darken($color-accent, 5%);
-  }
-}

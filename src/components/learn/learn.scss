@@ -1,0 +1,55 @@
+.learn {
+  margin-bottom: 60px;
+
+  @include media-up(md) {
+    margin-bottom: 100px;
+  }
+
+  @include media-up(xxl) {
+    margin-bottom: 150px;
+  }
+}
+
+.learn__header {
+  text-align: center;
+  margin-bottom: 45px;
+
+  @include media-up(sm) {
+    margin-bottom: 60px;
+  }
+}
+
+.learn__articles {
+  display: grid;
+  row-gap: 20px;
+  margin-bottom: 40px;
+
+  @include media-down(sm) {
+    .article {
+      margin: 0 auto;
+    }
+  }
+
+  @include media-up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 30px;
+    margin-bottom: 60px;
+
+    .article-wide {
+      grid-column: 2 span;
+    }
+  }
+
+  @include media-up(md) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 22px;
+    row-gap: 35px;
+  }
+
+  @include media-up(lg) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 26px;
+    row-gap: 43px;
+  }
+}

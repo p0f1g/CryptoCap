@@ -1,0 +1,9 @@
+mixin article(item)
+
+  article.article
+    .article__img
+      img(src=`images/articles/${item.img}`, alt='')
+    .article__content
+      .article__categorie= item.categorie
+      h2.article__title= item.title
+      .article__text= item.text

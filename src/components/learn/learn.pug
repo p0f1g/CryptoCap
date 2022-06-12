@@ -1,0 +1,14 @@
+include articles.data.pug
+
+mixin learn()
+
+  section.learn
+    .learn__inner
+      .learn__header
+        h2.title Learn About Cryptocurrency
+        h3.subtitle Learn all about cryptocurrency to start investing
+      .learn__articles
+        +article-wide()
+        each article in articles
+          +article(article)
+      a.link-more See All Articles
